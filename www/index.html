@@ -32,18 +32,53 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/framework7.ios.min.css">
+		<link rel="stylesheet" href="css/ionicons.css">
+        <title>FirstApp</title>
     </head>
+<style>
+.ios .tabbar-labels a.tab-link-active{
+		color:#000000;
+	}
+
+.ios .tabbar-labels a.tab-link:hover{
+		color:#000000;
+	}
+	
+</style>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+		 <!-- Toolbar -->
+		<div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+            <a href="#view-today" class="tab-link tab-link-active">
+              <i class="icon ion-ios-search"></i>
+              <span class="tabbar-label">Search</span>
+            </a>
+            <a href="#view-categories" class="tab-link">
+              <i class="icon ion-ios-paper"></i>
+              <span class="tabbar-label">Bookings</span>
+            </a>
+            <a href="#view-discover" class="tab-link">
+              <i class="icon ion-ios-wallet"></i>
+              <span class="tabbar-label">Wallet</span>
+            </a>
+            <a href="#view-search" class="tab-link">
+              <i class="icon ion-ios-body"></i>
+              <span class="tabbar-label">Profile</span>
+            </a>
+          </div>
         </div>
+		
+		
+		
+		
+		
+		
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+		<script src="js/framework7.min.js"></script>
+    	<script src="js/app.js"></script>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>
 </html>
