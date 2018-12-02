@@ -28,47 +28,128 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="css/framework7.ios.min.css">
 		<link rel="stylesheet" href="css/ionicons.css">
+		<link rel="stylesheet" href="css/style.css">
         <title>FirstApp</title>
     </head>
 <style>
-.ios .tabbar-labels a.tab-link-active{
+	body{
+		font-family: 'Signika', sans-serif;
+		font-size:6px; 
+		font-weight: 100;
+	}
+	
+	h2{
+		font-size:12px;
+		font-family:'Signika', sans-serif;
+		font-weight: 100;
+		color:#000000;
+	}
+	.ios .tabbar-labels a.tab-link-active{
 		color:#000000;
 	}
 
-.ios .tabbar-labels a.tab-link:hover{
+	.ios .tabbar-labels a.tab-link:hover{
 		color:#000000;
+	}
+	.item-subtitle{
+		color:#000000;
+		font-family:'Signika', sans-serif;
+	}
+	.item-title{
+		color:#000000;
+		font-family:'Signika', sans-serif;
 	}
 	
 </style>
-    <body>
-		 <!-- Toolbar -->
-		<div class="toolbar tabbar tabbar-labels">
-          <div class="toolbar-inner">
-            <a href="#view-today" class="tab-link tab-link-active">
-              <i class="icon ion-ios-search"></i>
-              <span class="tabbar-label">Search</span>
-            </a>
-            <a href="#view-categories" class="tab-link">
+ 
+<body>
+<div id="app">
+	<div class="views tabs">
+<!-- Head Search Bar -->
+<form class="searchbar">
+     <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+               <input type="search" placeholder="Search for a service" style="background-color:;">
+                    <i class="searchbar-icon"></i>
+                    <span class="input-clear-button"></span>
+           </div>
+              <span class="searchbar-disable-button">Cancel</span>
+     </div>
+</form>
+<!-- Featured img -->
+<a href="#">
+     <div class="card">
+        <img class="featured-image" src="img/featuredimg.jpg" alt="" style="max-width:100%;">
+              <div class="card-infos">
+                  <h2 class="card-title">Best service in New York City</h2>
+                  <div class="card-bottom">
+                     <div class="card-author">
+                        <img class="card-author-image" src="img/authors/author-7.jpg" alt="">
+                         <div>Service Provider</div>
+                     </div>
+                  </div>
+              </div>
+      </div>
+ </a>
+
+<!-- Category-->
+<div class="categories-container">
+  <div class="two-columns-cards">
+   <a href="#">
+    <div class="card" style="">
+     <img class="card-image" src="img/hairstyle.svg" alt="">
+     <h2>Hairstyle</h2>
+     
+    </div>
+   </a>
+   <a href="#">
+   <div class="card">
+     <img class="card-image" src="img/cooking.png" alt="">
+     <h2>Chef</h2>
+     
+   </div>
+   </a>
+	<a href="#">
+    <div class="card">
+     <img class="card-image" src="img/hairstyle.svg" alt="">
+     <h2>Hairstyle</h2>
+     
+    </div>
+   </a>
+  </div>
+ </div>	
+
+<!-- Toolbar -->
+<div class="toolbar tabbar tabbar-labels">
+     <div class="toolbar-inner">
+          <a href="#view-today" class="tab-link tab-link-active">
+             <i class="icon ion-ios-search"></i>
+             <span class="tabbar-label">Search</span>
+           </a>
+           <a href="#view-categories" class="tab-link">
               <i class="icon ion-ios-paper"></i>
               <span class="tabbar-label">Bookings</span>
-            </a>
-            <a href="#view-discover" class="tab-link">
+           </a>
+           <a href="#view-discover" class="tab-link">
               <i class="icon ion-ios-wallet"></i>
               <span class="tabbar-label">Wallet</span>
-            </a>
-            <a href="#view-search" class="tab-link">
+           </a>
+           <a href="#view-search" class="tab-link">
               <i class="icon ion-ios-body"></i>
               <span class="tabbar-label">Profile</span>
-            </a>
-          </div>
-        </div>
+           </a>
+      </div>
+ </div>
+	</div>
+	</div>
 		
 		
 		
